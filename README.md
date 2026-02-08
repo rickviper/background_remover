@@ -2,7 +2,7 @@
 
 A web-based AI Background Remover built with Python, Flask, and the rembg library. Features a aesthetic/retro inspired UI for removing backgrounds from images automatically.
 
-![AI Background Remover](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![AI Background Remover](https://img.shields.io/badge/Python-3.12+-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-3.0.0-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 

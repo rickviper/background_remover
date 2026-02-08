@@ -156,7 +156,6 @@ This project is open source and available under the MIT License.
 
 ## Credits
 
-
 **Frontend Colour Scheme**: Inspired from Vencord Website
 
 ## Support
@@ -165,4 +164,4 @@ For issues, questions, or contributions, please refer to the project repository.
 
 ---
 
-**Enjoy removing backgrounds with AI!
+**Enjoy removing backgrounds with AI!**

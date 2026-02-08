@@ -148,7 +148,7 @@ This project is open source and available under the MIT License.
 
 ## Credits
 
-- **Frontend Colour Scheme**: Inspired from Vencord Website
+- **Frontend Colour Scheme**: Inspired from Vencord's site
 - **Test Image** : from https://upload.wikimedia.org/wikipedia/en/a/a3/Lordvoldemort.jpg
 
 ## Support

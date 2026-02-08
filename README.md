@@ -156,10 +156,8 @@ This project is open source and available under the MIT License.
 
 ## Credits
 
-- **rembg**: AI background removal library
-- **U²-Net**: Deep learning model for segmentation
-- **Flask**: Python web framework
-- **UI Colour Scheme**: Inspired from Vencord Website
+
+**Frontend Colour Scheme**: Inspired from Vencord Website
 
 ## Support
 

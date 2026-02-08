@@ -39,7 +39,6 @@ ai-background-remover/
 
 - **Python**: 3.12 or higher
 
-
 ## Installation (Using UV)
 
 ### Step 1: Clone this repo and cd into it
@@ -49,22 +48,17 @@ git clone https://github.com/rickviper/background_remover
 cd background_remover
 ```
 
-
 ### Step 2: Make sure uv is installed on your system
-
 
 To install uv, follow the documentation at: https://docs.astral.sh/uv/
 
-
-### Step 3: Run the ```app.py``` file
+### Step 3: Run the `app.py` file
 
 ```bash
 uv run app.py
 ```
 
 UV will automatically start a virtual envrionment, install dependencies and start the server running on localhost.
-
-
 
 You should see output similar to:
 
@@ -81,7 +75,6 @@ Open your web browser and navigate to:
 ```
 http://localhost:5000
 ```
-
 
 ## Usage
 
@@ -114,7 +107,6 @@ http://localhost:5000
 
 Maximum file size: **10MB**
 
-
 ## Configuration
 
 You can modify the following settings in [`app.py`](app.py:1):
@@ -130,11 +122,9 @@ app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'webp'}
 cleanup_old_files(folder, max_age_hours=24)
 ```
 
-
-
 ### Issue: "File too large" error
 
-**Solution**: Reduce the image size or change the maximum file size limit in ```app.py```. The maximum size is 10MB.
+**Solution**: Reduce the image size or change the maximum file size limit in `app.py`. The maximum size is 10MB.
 
 ### Issue: Port 5000 already in use
 
@@ -144,9 +134,6 @@ cleanup_old_files(folder, max_age_hours=24)
 app.run(debug=True, host='0.0.0.0', port=5001)  # Use port 5001
 ```
 
-
-
-
 ## Security Features
 
 - File type validation (MIME type + extension)
@@ -155,16 +142,14 @@ app.run(debug=True, host='0.0.0.0', port=5001)  # Use port 5001
 - No arbitrary file execution
 - Auto-cleanup of old temporary files
 
-
-
 ## License
 
 This project is open source and available under the MIT License.
 
 ## Credits
 
-**Frontend Colour Scheme**: Inspired from Vencord Website
-**Test Image** : from https://upload.wikimedia.org/wikipedia/en/a/a3/Lordvoldemort.jpg
+- **Frontend Colour Scheme**: Inspired from Vencord Website
+- **Test Image** : from https://upload.wikimedia.org/wikipedia/en/a/a3/Lordvoldemort.jpg
 
 ## Support
 

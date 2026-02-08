@@ -1,6 +1,6 @@
 # AI Background Remover
 
-A web-based AI Background Remover built with Python, Flask, and the rembg library. Features a pixel/retro game-inspired UI for removing backgrounds from images automatically.
+A web-based AI Background Remover built with Python, Flask, and the rembg library. Features a aesthetic/retro inspired UI for removing backgrounds from images automatically.
 
 ![AI Background Remover](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-3.0.0-green.svg)
@@ -12,7 +12,7 @@ A web-based AI Background Remover built with Python, Flask, and the rembg librar
 - **Drag & Drop Support**: Easily upload images by dragging and dropping
 - **Multiple Format Support**: Accepts PNG, JPG, JPEG, and WEBP images
 - **Transparent PNG Output**: Processed images are saved as transparent PNG files
-- **Pixel/Retro UI**: Clean, user-friendly interface with 8-bit retro game styling
+- **Aesthetic/Simple UI**: Clean, user-friendly interface with simple aesthetic styling
 - **Responsive Design**: Works on desktop and mobile devices
 - **Fast Processing**: Optimized for quick background removal
 - **Secure File Handling**: File validation, size limits, and secure filename handling
@@ -26,7 +26,7 @@ ai-background-remover/
 ├── README.md             # This file
 ├── static/
 │   ├── css/
-│   │   └── style.css     # Pixel-themed CSS styles
+│   │   └── style.css     # retro-themed CSS styles
 │   └── js/
 │       └── main.js       # JavaScript for UI interactions
 ├── templates/
@@ -37,73 +37,27 @@ ai-background-remover/
 
 ## Requirements
 
-- **Python**: 3.8 or higher
-- **Operating System**: Windows, macOS, or Linux
-- **Disk Space**: ~500MB for dependencies and models
-- **Memory**: 4GB RAM recommended (8GB for better performance)
+- **Python**: 3.12 or higher
 
-## Installation
 
-### Step 1: Clone or Download the Project
+## Installation (Using UV)
 
-If you have the project files, navigate to the project directory:
 
-```bash
-cd ai-background-remover
-```
+### Step 1: Make sure uv is installed on your system
 
-### Step 2: Create a Virtual Environment (Recommended)
 
-**Windows:**
+To install uv, follow the documentation at: https://docs.astral.sh/uv/
+
+
+### Step 2: Run the ```app.py``` file
 
 ```bash
-python -m venv venv
-venv\Scripts\activate
+uv run app.py
 ```
 
-**macOS/Linux:**
+UV will automatically start a virtual envrionment, install dependencies and start the server running on localhost.
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
 
-### Step 3: Install Dependencies
-
-Install all required Python packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-This will install:
-
-- Flask (Web framework)
-- rembg (AI background removal)
-- Pillow (Image processing)
-- onnxruntime (Model runtime)
-- pymatting (Alpha matting)
-- pooch (Model downloader)
-
-### Step 4: Verify Installation
-
-Check that all packages are installed correctly:
-
-```bash
-pip list
-```
-
-You should see Flask, rembg, Pillow, and other packages listed.
-
-## Running the Application
-
-### Start the Flask Server
-
-Run the application with:
-
-```bash
-python app.py
-```
 
 You should see output similar to:
 
@@ -121,7 +75,6 @@ Open your web browser and navigate to:
 http://localhost:5000
 ```
 
-The application will load with the pixel-themed interface.
 
 ## Usage
 
@@ -154,15 +107,6 @@ The application will load with the pixel-themed interface.
 
 Maximum file size: **10MB**
 
-## API Endpoints
-
-| Endpoint               | Method | Description                         |
-| ---------------------- | ------ | ----------------------------------- |
-| `/`                    | GET    | Render homepage                     |
-| `/upload`              | POST   | Upload image file                   |
-| `/remove-bg`           | POST   | Process image and remove background |
-| `/download/<filename>` | GET    | Download processed image            |
-| `/preview/<filename>`  | GET    | Preview processed image             |
 
 ## Configuration
 
@@ -179,28 +123,11 @@ app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'webp'}
 cleanup_old_files(folder, max_age_hours=24)
 ```
 
-## Troubleshooting
 
-### Issue: "Module not found" error
-
-**Solution**: Make sure you've activated the virtual environment and installed dependencies:
-
-```bash
-# Activate virtual environment
-venv\Scripts\activate  # Windows
-source venv/bin/activate  # macOS/Linux
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### Issue: Model download is slow
-
-**Solution**: The first run will download the AI model (~176MB). This is a one-time process. Subsequent runs will use the cached model.
 
 ### Issue: "File too large" error
 
-**Solution**: Reduce the image size or compress it before uploading. The maximum size is 10MB.
+**Solution**: Reduce the image size or change the maximum file size limit in ```app.py```. The maximum size is 10MB.
 
 ### Issue: Port 5000 already in use
 
@@ -210,28 +137,8 @@ pip install -r requirements.txt
 app.run(debug=True, host='0.0.0.0', port=5001)  # Use port 5001
 ```
 
-### Issue: Background removal is slow
 
-**Solution**:
 
-- Use smaller images for faster processing
-- Close other applications to free up memory
-- Consider using a GPU (requires additional setup)
-
-## Optional Improvements
-
-Here are some features that could be added in the future:
-
-- [ ] Batch image processing
-- [ ] Background color replacement
-- [ ] Background blur option
-- [ ] Before/After comparison slider
-- [ ] Dark/Light retro theme toggle
-- [ ] Progress percentage indicator
-- [ ] GPU acceleration support
-- [ ] Multiple AI model options
-- [ ] Image quality settings
-- [ ] API for programmatic access
 
 ## Security Features
 
@@ -241,12 +148,7 @@ Here are some features that could be added in the future:
 - No arbitrary file execution
 - Auto-cleanup of old temporary files
 
-## Performance Tips
 
-1. **Use smaller images**: Images under 2000x2000 pixels process faster
-2. **Close unused apps**: Free up memory for better performance
-3. **Use SSD storage**: Faster disk I/O improves processing speed
-4. **Enable GPU**: For production use, consider GPU acceleration
 
 ## License
 
@@ -257,7 +159,7 @@ This project is open source and available under the MIT License.
 - **rembg**: AI background removal library
 - **U²-Net**: Deep learning model for segmentation
 - **Flask**: Python web framework
-- **Press Start 2P**: Pixel font by CodeMan38
+- **UI Colour Scheme**: Inspired from Vencord Website
 
 ## Support
 
@@ -265,4 +167,4 @@ For issues, questions, or contributions, please refer to the project repository.
 
 ---
 
-**Enjoy removing backgrounds with AI! 🎮✨**
+**Enjoy removing backgrounds with AI!

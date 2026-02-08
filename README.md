@@ -42,14 +42,21 @@ ai-background-remover/
 
 ## Installation (Using UV)
 
+### Step 1: Clone this repo and cd into it
 
-### Step 1: Make sure uv is installed on your system
+```bash
+git clone https://github.com/rickviper/background_remover
+cd background_remover
+```
+
+
+### Step 2: Make sure uv is installed on your system
 
 
 To install uv, follow the documentation at: https://docs.astral.sh/uv/
 
 
-### Step 2: Run the ```app.py``` file
+### Step 3: Run the ```app.py``` file
 
 ```bash
 uv run app.py

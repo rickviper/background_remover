@@ -1,0 +1,15 @@
+[project]
+name = "ai-background-remover"
+version = "0.1.0"
+description = "AI Background Remover - Remove backgrounds from images using AI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask==3.0.0",
+    "werkzeug==3.0.1",
+    "rembg==2.0.50",
+    "pillow==10.1.0",
+    "onnxruntime>=1.17.0",
+    "pymatting==1.1.12",
+    "pooch==1.8.0",
+]

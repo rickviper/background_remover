@@ -7,11 +7,11 @@ import os
 import uuid
 from datetime import datetime, timedelta
 from pathlib import Path
-from flask import Flask, render_template, request, jsonify, send_file, abort
-from werkzeug.utils import secure_filename
-from PIL import Image
-import rembg
 
+import rembg
+from flask import Flask, abort, jsonify, render_template, request, send_file
+from PIL import Image
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
@@ -90,7 +90,7 @@ def remove_background():
     data = request.get_json()
     if not data or 'filename' not in data:
         return jsonify({'success': False, 'error': 'No filename provided'}), 400
-    input_filename = data['filename']
+    input_filename = secure_filename( data['filename'])
     input_path = os.path.join(app.config['UPLOAD_FOLDER'], input_filename)
     if not os.path.exists(input_path):
         return jsonify({'success': False, 'error': 'File not found'}), 404

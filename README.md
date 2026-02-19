@@ -39,6 +39,7 @@ ai-background-remover/
 ## Requirements
 
 - **Python**: 3.12 or higher
+- **UV**: To install dependencies and run the python file
 
 ## Installation (Using UV)
 
@@ -104,10 +105,6 @@ http://localhost:5000
 - **JPEG** (.jpg, .jpeg)
 - **WebP** (.webp)
 
-## File Size Limit
-
-Maximum file size: **10MB**
-
 ## Configuration
 
 You can modify the following settings in [`app.py`](app.py:1):
@@ -149,7 +146,7 @@ This project is open source and available under the MIT License.
 
 ## Credits
 
-- **Frontend Colour Scheme**: Inspired from Vencord's site
+- **UI Colour Scheme**: Inspired from Vencord's site
 - **Test Image** : from https://upload.wikimedia.org/wikipedia/en/a/a3/Lordvoldemort.jpg
 
 ## Support
